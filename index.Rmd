@@ -117,7 +117,59 @@ As of the most recent data collection, the COVID-19 dataset includes a total of 
 
 Include a table of aggregate information
 
+```{r}
+library(dplyr)
+covid <- read.csv("/Users/ivysun/Desktop/Covid Data.csv")
+num_table <- covid %>%
+  mutate(SEX = factor(SEX, levels = c(1, 2), labels= c("female", "male"))) %>%
+  filter(CLASIFFICATION_FINAL < 4) %>%
+  group_by(SEX) %>%
+  summarize(total_num = n()) 
+
+tobacco_table <- covid %>%
+  mutate(SEX = factor(SEX, levels = c(1, 2), labels= c("female", "male"))) %>%
+  filter(CLASIFFICATION_FINAL < 4) %>%
+  group_by(SEX) %>%
+  filter(TOBACCO == 1) %>%
+  summarize(num_use_tobacco = sum(TOBACCO)) 
+
+
+hipertension_table <- covid %>%
+  mutate(SEX = factor(SEX, levels = c(1, 2), labels = c("female", "male"))) %>%
+  filter(CLASIFFICATION_FINAL < 4) %>%
+  group_by(SEX) %>%
+  filter(HIPERTENSION == 1) %>%
+  summarize(num_hipertension = sum(HIPERTENSION))
+
+
+died_table <- covid %>%
+  mutate(SEX = factor(SEX, levels = c(1, 2), labels = c("female", "male"))) %>%
+  filter(CLASIFFICATION_FINAL < 4) %>%
+  group_by(SEX) %>%
+  filter(DATE_DIED != as.Date(9999-99-99)) %>%
+  summarize(num_died = n())
+
+
+age_table <- covid %>%
+  mutate(SEX = factor(SEX, levels = c(1, 2), labels = c("female", "male"))) %>%
+  filter(CLASIFFICATION_FINAL < 4) %>%
+  group_by(SEX) %>%
+  summarize(max_age = max(AGE))
+
+
+summary_table <- num_table %>%
+  left_join(tobacco_table, by = "SEX") %>%
+  left_join(hipertension_table, by = "SEX") %>%
+  left_join(died_table, by = "SEX") %>%
+  left_join(age_table, by = "SEX")
+
+summary_table
+
+```
+
 Describe why you included the table and what information it reveals
+
+The table presented provides a detailed summary of COVID-19 data categorized by sex, highlighting significant health-related statistics for both males and females. This includes the total number of COVID-19 cases, the incidence of tobacco use, the prevalence of hypertension, the total deaths, and the maximum age recorded within each group. Such data is essential for understanding how different factors might influence the outcomes of the disease. For instance, it reveals that males have a higher number of tobacco users and also a higher mortality rate compared to females. Analyzing these differences is crucial for health professionals and policymakers, as it helps in tailoring public health responses and interventions more effectively to address the specific needs and risks associated with each sex during the pandemic.
 
 ### Chart 1
 
@@ -143,6 +195,10 @@ ggplot(data=chart1_2,aes(x=TOBACCO))+
   labs(title="The distribution of tobacco use", 
        subtitle="people with unclear determination of whether got COVID")
 ```
+
+Describe why you chose this chart and what information it reveals
+
+Since during the pandemic, many people think that tobacco uses cause negative influence on the probability of getting COVID-19 disease, but there is no certain discussion. Thus, we want to know whether there is a relationship between tobacco use and COVID-19 disease. There are two bar charts in chart 1, one is for people with COVID-19, one is for people who did not get infected or have unclear symptoms which is inconclusive. According to chart1_1, we see that there is minor of people in “yes” and major of people in “no”, and to chart1_2, there is only people in “yes”, which represents that there are some people who are inconclusive or not infected but with tobacco use, and there are no people who are inconclusive or not infected without tobacco use. Therefore, even though we cannot conclude that people with tobacco use are more likely to avoid being infected by COVID by using these limited data, we can say that this chart overturn the old saying “tobacco uses cause negative influence on the probability of getting COVID-19 diseases”.
 
 
 ### Chart 2
@@ -171,9 +227,29 @@ ggplot(data=covid_data, aes(x=Covid_Status, fill=HIPERTENSION)) +
 ```
 Describe why you chose this chart and what information it reveals
 
+The stacked bar plot effectively illustrates the proportion of individuals with and without hypertension among COVID-19 positive and negative cases. The chart reveals that the proportion of individuals with hypertension is relatively consistent across both groups, indicating no significant difference in hypertension prevalence between those who tested positive and those who tested negative for COVID-19. This visualization helps highlight that within this dataset, hypertension does not appear to be a distinguishing factor between COVID-19 positive and negative individuals. 
 
 ### Chart 3
 
 Include a chart
 
+```{r echo = FALSE, code = readLines("chart3.R")}
+library(dplyr)
+Covid <- read.csv("/Users/ivysun/Desktop/Covid Data.csv")
+library(ggplot2)
+
+
+
+Covid$Covid_Status <- ifelse(Covid$CLASIFFICATION_FINAL %in% c(1, 2, 3), "Positive", "Inconclusive")
+
+
+ggplot(data=Covid, aes(x=AGE, fill=Covid_Status))+
+  geom_boxplot()+
+  labs(title="The difference of age distribution of patients", 
+       subtitle="By age", 
+       x="age", 
+       y="Covid status")
+```
 Describe why you chose this chart and what information it reveals
+
+During the pandemic, we usually saw the news or journal reports said some elders died or felt really bad because of the disease, so we want to know whether older people are more likely being infected by COVID_19 because of the weak immune system. We draw two box plots in one chart, each of them shows out the distribution of age classified by positive or negative status of COVID. According to the chart, we can see the median age of people with positive status is relatively larger than the median age of those with negative or inconclusive status, so we may say younger age may have a better protection from avoiding being infected by this virus. However, there is more outliers in positive status, so the conclusion is not exact and precise enough. We still need more research on this.
