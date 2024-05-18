@@ -225,16 +225,16 @@ Write a summary paragraph of findings that includes the 5 values calculated from
 your summary information R script
 
 As of the most recent data collection, the COVID-19 dataset includes a total of
-1,048,575 patients, but the dataset indicated that 4 or higher in the column of classification means that the patient is not a carrier of covid or that the 
-test is inconclusive, so we will excludes those. The dataset includes 
-comprehensive information across 21 features and 391979 patients are 
-conclusively recognized as covid carrier. Among these patients, the oldest 
-individual is 121 years old. A significant subset of the patient population, 
-specifically 28747 individuals, has a history of tobacco use. Additionally, 
-there are 76727 patients who suffer from hypertension.  Furthermore, the dataset 
-highlights that there are 29815 patients who are elderly, aged over 70 years. 
-Lastly, the data records indicate that there have been 54236 deaths among the 
-covid patients where the final classification was less than 4.
+1,048,575 patients, but the dataset indicated that 4 or higher in the column of classification means that the patient is not a carrier of covid or that the test 
+is inconclusive, so we will excludes those. The dataset includes comprehensive 
+information across 21 features and 391979 patients are conclusively recognized 
+as covid carrier. Among these patients, the oldest individual is 121 years old. 
+A significant subset of the patient population, specifically 28747 individuals, 
+has a history of tobacco use. Additionally, there are 76727 patients who suffer 
+from hypertension.  Furthermore, the dataset highlights that there are 29815 
+patients who are elderly, aged over 70 years. Lastly, the data records indicate 
+that there have been 54236 deaths among the covid patients where the final 
+classification was less than 4.
 
 ### Table
 
