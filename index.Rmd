@@ -56,10 +56,13 @@ this project is to protect the stability of the society.
 
 ### Related Work  
 
-For this topic, we focus on the effects of hypertension, smoking and age on the likelihood of developing COVID-19.
+For this topic, we focus on the effects of hypertension, smoking and age on the 
+likelihood of developing COVID-19.
 
-Firstly, for hypertension. The majority of the research to far indicates that hypertension raises the chance of severe COVID-19, which is defined as 
-mortality, admission to intensive care, or a clinically recognized severity or a combination of these. However, whether this predictive profile was independent 
+Firstly, for hypertension. The majority of the research to far indicates that 
+hypertension raises the chance of severe COVID-19, which is defined as 
+mortality, admission to intensive care, or a clinically recognized severity or 
+a combination of these. However, whether this predictive profile was independent 
 of other risk factors was not always obvious. Whether persons with hypertension 
 were more likely to contract SARS CoV-2 than otherwise healthy people was not 
 the subject of any systematic reviews or meta-analyses.
@@ -135,7 +138,8 @@ when working with this data?
 We need to accurately do the anaylsis and provide it to professional experts to 
 examine before publish, since it is about coronavirus which relates to people's 
 lives, we need to make sure do not bring panic or wrong treatments to people all
-over the world. Moreover, although the users in the dataset must admitted their information being used, we still need to keep every person's private information 
+over the world. Moreover, although the users in the dataset must admitted their 
+information being used, we still need to keep every person's private information 
 as secret.
 
 What are possible limitations or problems with this data?   (at least 200 words)
@@ -150,7 +154,8 @@ Secondly, differences between reports: The data set relies on data reported by
 state and local governments and health departments. Although they may follow 
 the same rules and principles for collecting data, there may still be 
 differences in reporting practices and data quality between jurisdictions 
-because each location has its own management model or style. Changes in testing protocols, data collection methods, and reporting standards can lead to 
+because each location has its own management model or style. Changes in testing 
+protocols, data collection methods, and reporting standards can lead to 
 inconsistencies and biases in data sets.
 
 Thirdly, lack of detailed data: This data set mainly focuses on the type of 
@@ -163,7 +168,8 @@ final results and summary to a certain extent.
 Finally, lag of data: The data set reports cumulative counts based on the best 
 report as of the time of publication. However, reporting may be delayed and 
 previous entries may be revised as new information becomes available. These 
-data lags and revisions can affect the accuracy and reliability of the data set, especially when analyzing trends over time.
+data lags and revisions can affect the accuracy and reliability of the data set, 
+especially when analyzing trends over time.
 
 ### Implications
 
@@ -178,7 +184,8 @@ advance when encountering such a situation in life in the future.
 
 For technicians, they can use this data to understand COVID-19 trends, compare 
 whether the medical first aid implemented during the epidemic and the healthy 
-diet provided to everyone are enough to help, and draw conclusions for future emergencies. They can learn about the different harms caused by different 
+diet provided to everyone are enough to help, and draw conclusions for future 
+emergencies. They can learn about the different harms caused by different 
 diseases to patients, how to help these already sick people when encountering 
 similar virus outbreaks, improve immunity, and come up with a better first aid 
 plan.
@@ -224,7 +231,8 @@ comprehensive information across 21 features and 391979 patients are
 conclusively recognized as covid carrier. Among these patients, the oldest 
 individual is 121 years old. A significant subset of the patient population, 
 specifically 28747 individuals, has a history of tobacco use. Additionally, 
-there are 76727 patients who suffer from hypertension.  Furthermore, the dataset highlights that there are 29815 patients who are elderly, aged over 70 years. 
+there are 76727 patients who suffer from hypertension.  Furthermore, the dataset 
+highlights that there are 29815 patients who are elderly, aged over 70 years. 
 Lastly, the data records indicate that there have been 54236 deaths among the 
 covid patients where the final classification was less than 4.
 
@@ -285,7 +293,17 @@ summary_table
 
 Describe why you included the table and what information it reveals
 
-The table presented provides a detailed summary of COVID-19 data categorized by sex, highlighting significant health-related statistics for both males and females. This includes the total number of COVID-19 cases, the incidence of tobacco use, the prevalence of hypertension, the total deaths, and the maximum age recorded within each group. Such data is essential for understanding how different factors might influence the outcomes of the disease. For instance, it reveals that males have a higher number of tobacco users and also a higher mortality rate compared to females. Analyzing these differences is crucial for health professionals and policymakers, as it helps in tailoring public health responses and interventions more effectively to address the specific needs and risks associated with each sex during the pandemic.
+The table presented provides a detailed summary of COVID-19 data categorized by 
+sex, highlighting significant health-related statistics for both males and females. 
+This includes the total number of COVID-19 cases, the incidence of tobacco use, 
+the prevalence of hypertension, the total deaths, and the maximum age recorded 
+within each group. Such data is essential for understanding how different factors 
+might influence the outcomes of the disease. For instance, it reveals that males 
+have a higher number of tobacco users and also a higher mortality rate compared to 
+females. Analyzing these differences is crucial for health professionals and 
+policymakers, as it helps in tailoring public health responses and interventions 
+more effectively to address the specific needs and risks associated with each 
+sex during the pandemic.
 
 ### Chart 1
 
@@ -317,7 +335,19 @@ ggplot(data=chart1_2,aes(x=factor(TOBACCO, levels = c(1, 2), labels = c("Yes", "
        subtitle="people with unclear determination of whether got COVID")
 ```
 
-Since during the pandemic, many people think that tobacco uses cause negative influence on the probability of getting COVID-19 disease, but there is no certain discussion. Thus, we want to know whether there is a relationship between tobacco use and COVID-19 disease. There are two bar charts in chart 1, one is for people with COVID-19, one is for people who did not get infected or have unclear symptoms which is inconclusive. According to chart1_1, we see that there is minor of people in “yes” and major of people in “no”, and to chart1_2, there is only people in “yes”, which represents that there are some people who are inconclusive or not infected but with tobacco use, and there are no people who are inconclusive or not infected without tobacco use. Therefore, even though we cannot conclude that people with tobacco use are more likely to avoid being infected by COVID by using these limited data, we can say that this chart overturn the old saying “tobacco uses cause negative influence on the probability of getting COVID-19 diseases”.
+Since during the pandemic, many people think that tobacco uses cause negative 
+influence on the probability of getting COVID-19 disease, but there is no certain 
+discussion. Thus, we want to know whether there is a relationship between tobacco 
+use and COVID-19 disease. There are two bar charts in chart 1, one is for people 
+with COVID-19, one is for people who did not get infected or have unclear symptoms 
+which is inconclusive. According to chart1_1, we see that there is minor of people 
+in “yes” and major of people in “no”, and to chart1_2, there is only people in 
+“yes”, which represents that there are some people who are inconclusive or not 
+infected but with tobacco use, and there are no people who are inconclusive or 
+not infected without tobacco use. Therefore, even though we cannot conclude that 
+people with tobacco use are more likely to avoid being infected by COVID by using 
+these limited data, we can say that this chart overturn the old saying “tobacco 
+uses cause negative influence on the probability of getting COVID-19 diseases”.
 
 ### Chart 2
 ```{r}
@@ -340,7 +370,14 @@ ggplot(data=covid_data, aes(x=Covid_Status, fill=HIPERTENSION)) +
 ```
 Describe why you chose this chart and what information it reveals
 
-The stacked bar plot effectively illustrates the proportion of individuals with and without hypertension among COVID-19 positive and negative cases. The chart reveals that the proportion of individuals with hypertension is relatively consistent across both groups, indicating no significant difference in hypertension prevalence between those who tested positive and those who tested negative for COVID-19. This visualization helps highlight that within this dataset, hypertension does not appear to be a distinguishing factor between COVID-19 positive and negative individuals. 
+The stacked bar plot effectively illustrates the proportion of individuals with 
+and without hypertension among COVID-19 positive and negative cases. The chart 
+reveals that the proportion of individuals with hypertension is relatively 
+consistent across both groups, indicating no significant difference in hypertension
+prevalence between those who tested positive and those who tested negative for 
+COVID-19. This visualization helps highlight that within this dataset, hypertension
+does not appear to be a distinguishing factor between COVID-19 positive and 
+negative individuals. 
 
 ### Chart 3
 
@@ -364,4 +401,13 @@ ggplot(data=Covid, aes(x=AGE, fill=Covid_Status))+
 ```
 Describe why you chose this chart and what information it reveals
 
-During the pandemic, we usually saw the news or journal reports said some elders died or felt really bad because of the disease, so we want to know whether older people are more likely being infected by COVID_19 because of the weak immune system. We draw two box plots in one chart, each of them shows out the distribution of age classified by positive or negative status of COVID. According to the chart, we can see the median age of people with positive status is relatively larger than the median age of those with negative or inconclusive status, so we may say younger age may have a better protection from avoiding being infected by this virus. However, there is more outliers in positive status, so the conclusion is not exact and precise enough. We still need more research on this.
+During the pandemic, we usually saw the news or journal reports said some elders 
+died or felt really bad because of the disease, so we want to know whether older 
+people are more likely being infected by COVID_19 because of the weak immune 
+system. We draw two box plots in one chart, each of them shows out the distribution 
+of age classified by positive or negative status of COVID. According to the chart,
+we can see the median age of people with positive status is relatively larger 
+than the median age of those with negative or inconclusive status, so we may say 
+younger age may have a better protection from avoiding being infected by this virus.
+However, there is more outliers in positive status, so the conclusion is not exact 
+and precise enough. We still need more research on this.
