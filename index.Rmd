@@ -5,54 +5,113 @@ output: html_document
 
 ## Project title
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+Relationship between initial diseases and COVID-19
 
 ### Authors
 
-Names of your team members
+Ivy Sun, mengrs@uw.edu
+
+Yinyu Chen, cyinyu@uw.edu
+
+Jenny Fu, jennyfu1@uw.edu
 
 ### Date
 
-Winter 2022
+May 1st, Spring 2024
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+This project evaluates the impact of pre-existing conditions, demographic details (age, sex), and health behaviors (smoking) on the likelihood of contracting COVID-19 and the severity of its impact based on the dataset by Mexico Government. The research aims to improve targeted interventions and preventative measures by identifying high-risk profiles for enhanced management and isolation strategies, thus supporting societal health during the pandemic.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+COVID-19, cases, patients, symptom
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+COVID-19 is the most deadly pandemic in nearly a century, with more than a million people losing their lives. But there is a question worth wondering, does the new coronavirus attack all individuals indiscriminately, or do people with special characteristics become more susceptible to infection. In this project, we studied the physical conditions of people with COVID-19 before they got COVID-19, whether they were healthy or had pre-existing diseases, and whether this had an impact on the probability of getting COVID-19. Including gender, age and whether or not you smoke, whether these factors can be used to influence the probability of contracting COVID-19.
+
+As for what motivates this topic, we are interested in understanding the relationship between pre-existing diseases and COVID-19, so as to help us better understand and manage COVID-19. This study is important because analyzing the relationship between the two allows us to assess risk in advance, such as what characteristics of people are more likely to develop COVID-19, and such people can be prevented in advance. Second, we can learn which groups of people are at very high risk of contracting COVID-19, and they can be isolated from other groups in advance to prevent infection. Therefore, the significance of this project is to protect the stability of the society.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+For this topic, we focus on the effects of hypertension, smoking and age on the likelihood of developing COVID-19.
+
+Firstly, for hypertension. The majority of the research to far indicates that hypertension raises the chance of severe COVID-19, which is defined as mortality, admission to intensive care, or a clinically recognized severity or a combination of these. However, whether this predictive profile was independent of other risk factors was not always obvious. Whether persons with hypertension were more likely to contract SARS CoV-2 than otherwise healthy people was not the subject of any systematic reviews or meta-analyses.
+
+Then, for smoking. The research shows that It is known that coming into contact with hands or mouths might spread the COVID-19 virus.Why Smokers cannot wear their masks while smoking; hand-to-mouth contact occurs often and repeatedly during smoking.
+Their risk of infection will rise if they smoke in public areas where other uncovered smokers congregate.
+
+Finally for the age. The research shows that, like pneumonia and influenza, COVID-19 mortality rises exponentially with age at a Gompertz rate close to the median of aging-related causes of death. Second, in the adult age range, COVID-19 death rates are 2.8 to 8.2 times greater than those of influenza and pneumonia. Third, there are significant national differences in the association between age and COVID-19 mortality and fatality.
+
+References
+
+World Health Organization. Hypertension and COVID-19. World Health Organization, 2021. JSTOR, http://www.jstor.org/stable/resrep35611. Accessed 2 May 2024.
+
+World Health Organization. â€œSmoking and COVID-19.â€� Advancing Tobacco Control during the COVID-19 Pandemic: MPOWER Implementation Tobacco Free Initiative, World Health Organization, 2021, pp. 4â€“4. JSTOR, http://www.jstor.org/stable/resrep44979.6. Accessed 2 May 2024.
+
+Sasson, Isaac. â€œAge and COVID-19 Mortality: A Comparison of Gompertz Doubling Time across Countries and Causes of Death.â€� Demographic Research, vol. 44, 2021, pp. 379â€“96. JSTOR, https://www.jstor.org/stable/27032918. Accessed 2 May 2024.
 
 ### The Dataset
 
 Where did you find the data? Please include a link to the data source  
+
+The dataset is provided by the Mexican government, but we find it on Kaggle, link https://www.kaggle.com/datasets/meirnizri/covid19-dataset.
+
 Who collected the data?  
+
+On Kaggle, there is no exact information that shows the name of that person collected data, but it was posted by Meir Nizri.
+
 How was the data collected or generated?  
+
+The data was compiled from the Mexican government, and it may be collected by the public health organizations and hospitals in Mexico. The healthcare providers recorded data and reports of patients with various initial diseases who also got COVID-19 to judge how different diseases bring effects on COVID-19 symptoms.
+
 Why was the data collected?  
+
+The data was collected to address the need of predicting what kind of resource an individual might require based on various initial diseases and situations of health, and how to effectively allocate resources to treat different patients in the face of shortage.
+
 How many observations (rows) are in your data?  
+
+Since it is the data of Mexico, there are 1048576 observations (rows).
+
 How many features (columns) are in the data?  
+
+There are 21 features (columns).
+
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+
+We need to accurately do the anaylsis and provide it to professional experts to examine before publish, since it is about coronavirus which relates to people's lives, we need to make sure do not bring panic or wrong treatments to people all over the world. Moreover, although the users in the dataset must admitted their information being used, we still need to keep every person's private information as secret.
+
 What are possible limitations or problems with this data?   (at least 200 words)
+
+Firstly, incomplete testing data: There must be some cases that were not collected or reported, especially at the beginning of COVID-19, because people were not sure about the symptoms of COVID-19 at that time and thought it was a normal cold. Furthermore, to avoid the risk of discrimination and isolation, many people choose to conceal their actual circumstances.
+
+Secondly, differences between reports: The data set relies on data reported by state and local governments and health departments. Although they may follow the same rules and principles for collecting data, there may still be differences in reporting practices and data quality between jurisdictions because each location has its own management model or style. Changes in testing protocols, data collection methods, and reporting standards can lead to inconsistencies and biases in data sets.
+
+Thirdly, lack of detailed data: This data set mainly focuses on the type of COVID-19 disease and the presence of other conditions, such as obesity, diabetes, etc. However, there may be a lack of detailed case statistics, such as the duration of diabetes, severity, etc. Therefore, it is difficult to draw a precise and accurate conclusion from these limited data, which affects the final results and summary to a certain extent.
+
+Finally, lag of data: The data set reports cumulative counts based on the best report as of the time of publication. However, reporting may be delayed and previous entries may be revised as new information becomes available. These data lags and revisions can affect the accuracy and reliability of the data set, especially when analyzing trends over time.
 
 ### Implications
 
 Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
 
+The peak period of the epidemic has passed. Although our further analysis and mapping based on these data did not help the epidemic, it provided the public with valuable summaries and helpful precautions, so as to take precautions in advance when encountering such a situation in life in the future.
+
+For technicians, they can use this data to understand COVID-19 trends, compare whether the medical first aid implemented during the epidemic and the healthy diet provided to everyone are enough to help, and draw conclusions for future emergencies. They can learn about the different harms caused by different diseases to patients, how to help these already sick people when encountering similar virus outbreaks, improve immunity, and come up with a better first aid plan.
+
+For policymakers, policies such as home quarantine were proposed during the epidemic. By comparing data or analyzing trend fluctuations in the form of charts, they can know whether these proposed policies will help control the spread of the epidemic. In addition, they can also get some inspiration on how to achieve health, security and national stability goals by proposing some future policies and getting people to comply with and support these policies. For the patients themselves, patients suffering from the diseases listed in the data sheet can better understand their own bodies and related knowledge, and perform "effective self-rescue" in the case of qualifying.
+
 ### Limitations & Challenges
 What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+There are some challenges or limitations we need to address with our project idea more broadly. Firstly, there are a few missing values which may affect the data quality and the statistical results. The dataset indicates that values such as 97 and 99 represent missing data. Handling missing data is crucial as it can significantly impact the model's performance. Secondly, there are 21 features, determining which features are most predictive of high-risk patient is essential, since irrelevant or redundant features could reduce model accuracy. Also, COVID-19 has evolved over time, with different waves showing varying symptoms and severities, our project possibly required continuous updating with new data to better analyze and predict. Finally, this dataset provided by Mexican government might not generalize to populations outside of Mexico due to demographic and healthcare differences. This dataset’s applicability is one of the limitations of our research, and thus we have to consider more aspects if we want to know more and adapted to other regions.
 
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+
+As of the most recent data collection, the COVID-19 dataset includes a total of 1,048,575 patients, but the dataset indicated that 4 or higher in the column of classification means that the patient is not a carrier of covid or that the test is inconclusive, so we will excludes those. The dataset includes comprehensive information across 21 features and 391979 patients are conclusively recognized as covid carrier. Among these patients, the oldest individual is 121 years old. A significant subset of the patient population, specifically 28747 individuals, has a history of tobacco use. Additionally, there are 76727 patients who suffer from hypertension.  Furthermore, the dataset highlights that there are 29815 patients who are elderly, aged over 70 years. Lastly, the data records indicate that there have been 54236 deaths among the covid patients where the final classification was less than 4.
 
 ### Table
 
@@ -63,19 +122,55 @@ Describe why you included the table and what information it reveals
 ### Chart 1
 
 Include a chart
+```{r echo = FALSE, code = readLines("chart1.R")}
+Covid <- Covid %>% mutate(TOBACCO=recode(TOBACCO, `1`="Yes", `2`="No"))
 
-Describe why you chose this chart and what information it reveals
+chart1_1 <- Covid %>% 
+  filter(CLASIFFICATION_FINAL<4) 
+chart1_2 <- Covid %>% 
+  filter(CLASIFFICATION_FINAL>3) 
 
-Here's an example of how to run an R script inside an RMarkdown file:
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+ggplot(data=chart1_1,aes(x=TOBACCO))+
+  geom_bar()+
+  ylim(c(0,400000))+
+  labs(title="The distribution of tobacco use", 
+       subtitle="people with COVID")
+
+ggplot(data=chart1_2,aes(x=TOBACCO))+
+  geom_bar()+
+  ylim(c(0,400000))+
+  labs(title="The distribution of tobacco use", 
+       subtitle="people with unclear determination of whether got COVID")
 ```
 
+
 ### Chart 2
+```{r echo = FALSE, code = readLines("chart1.R")}
 
-Include a chart
+covid_data <- read.csv("/Users/ivysun/Desktop/Covid Data.csv")
+show(covid_data)
+head(covid_data)
+summary(covid_data)
 
+colnames(covid_data)
+
+covid_data$Covid_Status <- ifelse(covid_data$CLASIFFICATION_FINAL %in% c(1, 2, 3), "Positive", "Negative")
+covid_data$HIPERTENSION<- ifelse(covid_data$HIPERTENSION == 1, "Yes", "No")
+covid_data$HIPERTENSION <- as.factor(covid_data$HIPERTENSION)
+hypertension_summary <- table(covid_data$HIPERTENSION, covid_data$Covid_Status)
+print(hypertension_summary)
+
+library(ggplot2)
+ggplot(data=covid_data, aes(x=Covid_Status, fill=HIPERTENSION)) +
+  geom_bar(position="fill") +
+  labs(title="Proportion of Hypertension Among COVID-19 Positive and Negative Cases",
+       x="COVID-19 Status", y="Proportion", fill="Hypertension") +
+  scale_fill_manual(values=c("Yes"="red", "No"="blue")) +
+  theme_minimal()
+```
 Describe why you chose this chart and what information it reveals
+
 
 ### Chart 3
 
