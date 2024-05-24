@@ -1,7 +1,7 @@
 # Exploratory Analysis
 
 Link to your group's exploratory analysis here: 
-file:///Users/jenny/Desktop/Jenny%20info201/exploratory-analysis-jennyfu1/index.html
+file:///Users/jenny/Downloads/index%20(3).html
 (subsitute for your group's GitHub pages site)
 
 The purpose of this assignment is to provide you with the opportunity to explore your final project data and become familiar with collaborative coding techniques. By completing the assignment, you will demonstrate the following skills:
